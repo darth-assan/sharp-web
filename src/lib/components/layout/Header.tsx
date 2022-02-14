@@ -2,7 +2,7 @@ import { Box, Flex, Icon, IconButton, Image, Link } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { BiMenu } from "react-icons/bi";
 
-const Header = () => {
+const Header = ({ onOpen }: { onOpen: () => void }) => {
   return (
     <Flex as="header" width="full" align="center">
       <NextLink href="/" passHref>
@@ -17,6 +17,7 @@ const Header = () => {
           icon={<Icon as={BiMenu} boxSize={6} />}
           variant="ghost"
           colorScheme="primary"
+          onClick={onOpen}
         />
       </Box>
     </Flex>

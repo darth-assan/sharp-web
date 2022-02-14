@@ -1,18 +1,30 @@
-import { Box } from "@chakra-ui/react";
+import { Box, useDisclosure } from "@chakra-ui/react";
 import type { ReactNode } from "react";
 
 import Footer from "./Footer";
 import Header from "./Header";
+import MobileNavDrawer from "../../MobileNavDrawer";
 
 type LayoutProps = {
   children: ReactNode;
 };
 
 const Layout = ({ children }: LayoutProps) => {
+  const { isOpen, onClose, onOpen } = useDisclosure();
   return (
-    <Box margin="0 auto" maxWidth={800} transition="0.5s ease-out">
+    <Box
+      margin="0 auto"
+      maxWidth={800}
+      transition="0.5s ease-out"
+      pos="relative"
+    >
+      {isOpen && (
+        <Box pos="fixed" inset={0} zIndex={10} bg="rgba(0,0,0,.5)">
+          <MobileNavDrawer onClose={onClose} />
+        </Box>
+      )}
       <Box margin="8">
-        <Header />
+        <Header onOpen={onOpen} />
       </Box>
       <Box as="main" marginTop={22}>
         {children}
