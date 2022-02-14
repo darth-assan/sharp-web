@@ -23,7 +23,7 @@ export interface LabeledTextFieldProps
   helper?: string;
 }
 
-export const FormTextarea = forwardRef<HTMLInputElement, LabeledTextFieldProps>(
+const FormTextarea = forwardRef<HTMLInputElement, LabeledTextFieldProps>(
   ({ label, state, outerProps, labelProps, name, helper, ...props }) => {
     const {
       register,

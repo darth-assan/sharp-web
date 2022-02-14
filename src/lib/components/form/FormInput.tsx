@@ -21,7 +21,7 @@ export interface LabeledTextFieldProps
   icon?: IconProps;
 }
 
-export const FormInput = forwardRef<HTMLInputElement, LabeledTextFieldProps>(
+const FormInput = forwardRef<HTMLInputElement, LabeledTextFieldProps>(
   ({ label, state, outerProps, icon, labelProps, name, ...props }) => {
     const {
       register,

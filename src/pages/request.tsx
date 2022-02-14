@@ -10,7 +10,7 @@ import {
 } from "@chakra-ui/react";
 import React from "react";
 import { BounceLoader } from "react-spinners";
-import { Rating } from "react-simple-star-rating";
+import ReactStars from "react-rating-stars-component";
 
 import FileUpload from "../lib/components/form/FileUpload";
 import Form from "../lib/components/form/Form";
@@ -27,10 +27,8 @@ const Request = () => {
     setState((prevState) => prevState + 1);
   };
 
-  const [rating, setRating] = React.useState(0);
-
-  const handleRating = (rate: number) => {
-    setRating(rate);
+  const ratingChanged = (newRating: any) => {
+    console.log(newRating);
   };
 
   const renderTemplate = (value: number) => {
@@ -82,11 +80,11 @@ const Request = () => {
               <Heading>Job Details</Heading>
               <Image src="/images/home.png" alt="home" />
               <Text>Kwame Ntim</Text>
-              <Rating
-                transition
-                allowHalfIcon
-                onClick={handleRating}
-                ratingValue={rating}
+              <ReactStars
+                count={5}
+                onChange={ratingChanged}
+                size={24}
+                activeColor="#FCC201"
               />
             </Stack>
 

@@ -23,7 +23,7 @@ export interface LabeledSelectFieldProps
   options: readonly OptionProps[];
 }
 
-export const FormSelect = forwardRef<HTMLInputElement, LabeledSelectFieldProps>(
+const FormSelect = forwardRef<HTMLInputElement, LabeledSelectFieldProps>(
   ({ label, outerProps, labelProps, name, options }) => {
     const {
       formState: { isSubmitting, errors },

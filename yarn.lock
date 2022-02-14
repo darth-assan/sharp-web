@@ -5211,6 +5211,11 @@ react-phone-input-2@^2.15.0:
     lodash.startswith "^4.2.1"
     prop-types "^15.7.2"
 
+react-rating-stars-component@^2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/react-rating-stars-component/-/react-rating-stars-component-2.2.0.tgz#e947c6a1f59278e6fea1098453f43cb15d077c14"
+  integrity sha512-A3lgLxumfFQQicKQmxacZ91fq/zRaVWlCPnVodJmJV6obvod4/yCotetN9WuyBiUfnKsEFDBo/8B85ocwmL7ng==
+
 react-remove-scroll-bar@^2.1.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/react-remove-scroll-bar/-/react-remove-scroll-bar-2.2.0.tgz#d4d545a7df024f75d67e151499a6ab5ac97c8cdd"
@@ -5242,11 +5247,6 @@ react-select@*, react-select@^5.2.2:
     memoize-one "^5.0.0"
     prop-types "^15.6.0"
     react-transition-group "^4.3.0"
-
-react-simple-star-rating@^4.0.5:
-  version "4.0.5"
-  resolved "https://registry.yarnpkg.com/react-simple-star-rating/-/react-simple-star-rating-4.0.5.tgz#030e576015c9fca881677c9eeb55218f42278cd8"
-  integrity sha512-995YpXtLNNLim/K59lhRqFnvpRXJHsiJAnYAu2iHEjfCn4u8hP9Eam53hi+ubc6stU25FzvBPyXKzjhu7wl+hA==
 
 react-spinners@^0.11.0:
   version "0.11.0"
