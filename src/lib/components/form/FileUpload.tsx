@@ -25,7 +25,7 @@ interface IFileInputProps
 const FileUpload: FC<IFileInputProps> = (props) => {
   const { name, label = name, helper } = props;
   const { register, unregister, setValue, watch } = useFormContext();
-  const files: File[] = watch(name);
+  const files = watch(name);
   const onDrop = useCallback<DropzoneOptions["onDrop"]>(
     (droppedFiles) => {
       setValue(name, droppedFiles, { shouldValidate: true });
