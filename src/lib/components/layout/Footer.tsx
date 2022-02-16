@@ -1,6 +1,7 @@
 import {
   Box,
   Flex,
+  Grid,
   Heading,
   HStack,
   Image,
@@ -18,13 +19,17 @@ const Footer = () => {
       width="full"
       // align="center"
       bg="brand.primary"
-      py={10}
-      px={5}
+      py={{ base: 10, md: 20 }}
+      px={{ base: 5, md: 48 }}
       direction="column"
     >
-      <Stack spacing="1.5rem">
+      <Grid
+        templateColumns={{ md: "repeat(3, 1fr)" }}
+        gap={10}
+        alignItems="center"
+      >
         <Stack spacing="0.2rem">
-          <Heading as="h4" fontSize="2xl">
+          <Heading as="h4" fontSize={{ base: "2xl", md: "5xl" }}>
             SHARP!
           </Heading>
           <Text>“We do all”</Text>
@@ -45,43 +50,45 @@ const Footer = () => {
           </Stack>
         </Stack>
 
-        <Box>
-          <Heading as="h5" fontSize="lg">
-            Email
-          </Heading>
-          <Text fontSize="sm">xxxxxx@gmail.com</Text>
-        </Box>
-
-        <Stack spacing="1.2rem">
+        <Stack justifyContent="space-between" spacing={{ base: 10, md: 24 }}>
           <Box>
             <Heading as="h5" fontSize="lg">
-              Download Our Mobile App
+              Email
             </Heading>
-            <Text fontSize="sm">
-              Connect with a Serpro with just a few clicks
-            </Text>
+            <Text fontSize="sm">xxxxxx@gmail.com</Text>
           </Box>
-          <HStack align="center" spacing="2rem">
-            <Box>
-              <Image
-                h={10}
-                w="full"
-                src="/images/playstore.png"
-                alt="Platstore"
-              />
-            </Box>
 
+          <Stack spacing="1.2rem">
             <Box>
-              <Image
-                h={10}
-                w="full"
-                src="/images/appstore.png"
-                alt="AppStore"
-              />
+              <Heading as="h5" fontSize="lg">
+                Download Our Mobile App
+              </Heading>
+              <Text fontSize="sm">
+                Connect with a Serpro with just a few clicks
+              </Text>
             </Box>
-          </HStack>
+            <HStack align="center" spacing="2rem">
+              <Box>
+                <Image
+                  h={10}
+                  w="full"
+                  src="/images/playstore.png"
+                  alt="Platstore"
+                />
+              </Box>
+
+              <Box>
+                <Image
+                  h={10}
+                  w="full"
+                  src="/images/appstore.png"
+                  alt="AppStore"
+                />
+              </Box>
+            </HStack>
+          </Stack>
         </Stack>
-      </Stack>
+      </Grid>
     </Flex>
   );
 };

@@ -7,7 +7,7 @@ import { Button } from "../../lib/components/reusable/Button";
 
 const Signin = () => {
   return (
-    <Stack>
+    <Stack spacing="1rem" w={{ md: 120 }} mx="auto" mb={10}>
       <AuthHeader
         title="LOG IN"
         subtitle="Enter your account credentials to login"

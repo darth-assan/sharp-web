@@ -4,7 +4,7 @@ import { Button as ChakraButton, ButtonProps } from "@chakra-ui/react";
 export const Button = ({ title, ...rest }: { title: string } & ButtonProps) => {
   return (
     <ChakraButton
-      colorScheme="primaryColorScheme"
+      colorScheme="primaryButton"
       rounded="3px"
       px={{ base: 6, md: 10 }}
       h={12}

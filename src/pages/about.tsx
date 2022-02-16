@@ -6,7 +6,7 @@ const About = () => {
     <Stack spacing="2rem">
       <Image src="/images/about.png" alt="About" />
 
-      <Stack spacing="2rem" padding="8">
+      <Stack spacing="2rem" padding="8" px={{ md: 32 }} w={{ md: 130 }}>
         <Stack>
           <Heading as="h2" fontSize="2xl">
             What is SHARP?

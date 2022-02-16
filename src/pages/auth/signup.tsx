@@ -7,7 +7,7 @@ import { Button } from "../../lib/components/reusable/Button";
 
 const Signup = () => {
   return (
-    <Stack spacing="1rem">
+    <Stack spacing="1rem" w={{ md: 120 }} mx="auto" mb={10}>
       <AuthHeader
         title="SIGN UP"
         subtitle="Fill the form below to create an account"

@@ -1,17 +1,20 @@
-import React, { FC, useCallback, useEffect } from "react";
-import { DropzoneOptions, useDropzone } from "react-dropzone";
-import { useFormContext } from "react-hook-form";
 import {
   Box,
   Flex,
   FormControl,
+  FormLabel,
   FormHelperText,
   Grid,
   Image,
   Stack,
   Text,
 } from "@chakra-ui/react";
-import { FormLabel } from "@chakra-ui/form-control";
+import type { FC } from "react";
+import type React from "react";
+import { useCallback, useEffect } from "react";
+import type { DropzoneOptions } from "react-dropzone";
+import { useDropzone } from "react-dropzone";
+import { useFormContext } from "react-hook-form";
 
 interface IFileInputProps
   extends React.DetailedHTMLProps<
@@ -25,7 +28,7 @@ interface IFileInputProps
 const FileUpload: FC<IFileInputProps> = (props) => {
   const { name, label = name, helper } = props;
   const { register, unregister, setValue, watch } = useFormContext();
-  const files = watch(name);
+  const files: File[] = watch(name);
   const onDrop = useCallback<DropzoneOptions["onDrop"]>(
     (droppedFiles) => {
       setValue(name, droppedFiles, { shouldValidate: true });

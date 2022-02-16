@@ -139,7 +139,7 @@ const Request = () => {
 
   return (
     <Stack spacing="2rem">
-      <Stack spacing="3rem" padding="8">
+      <Stack spacing="3rem" padding="8" w={{ md: 108 }} mx="auto">
         <Stack spacing="1.5rem">
           <AuthHeader
             title="Request A Serpro!"

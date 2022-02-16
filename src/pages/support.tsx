@@ -17,14 +17,19 @@ import { Button } from "../lib/components/reusable/Button";
 
 const Support = () => {
   return (
-    <Stack spacing="2rem" margin="8" divider={<Divider />}>
+    <Stack
+      spacing="2rem"
+      marginY={{ base: "8", md: 20 }}
+      divider={<Divider />}
+      px={{ md: 32 }}
+    >
       <AuthHeader
         title="How Can We Help You?"
         subtitle="Type in your message and we will be sure to get back to you!"
       />
 
       <Form onSubmit={(values) => console.log(values)}>
-        <Stack spacing="1.5rem">
+        <Stack spacing="1.5rem" w={{ md: 108 }}>
           <FormInput name="name" label="Name" placeholder="John Doe" />
           <FormInput
             name="email"
