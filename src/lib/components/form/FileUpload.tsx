@@ -1,6 +1,3 @@
-import type React from "react";
-import { useFormContext, Controller } from "react-hook-form";
-import type { FieldValues, Control } from "react-hook-form";
 import {
   Box,
   Flex,
@@ -14,6 +11,8 @@ import {
 } from "@chakra-ui/react";
 import { useCallback, useEffect } from "react";
 import { useDropzone } from "react-dropzone";
+import { useFormContext, Controller } from "react-hook-form";
+import type { FieldValues, Control } from "react-hook-form";
 
 export const DropzoneField = ({
   onChange,
@@ -97,7 +96,7 @@ const FileUpload = ({
   name: string;
   label: string;
   helper: string;
-  control: Control<FieldValues>;
+  control?: Control<FieldValues>;
 }) => {
   // const { control } = useFormContext();
 

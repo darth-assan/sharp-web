@@ -1,9 +1,10 @@
 import { Stack } from "@chakra-ui/react";
-import AuthHeader from "../../lib/styles/customTheme/components/AuthHeader";
+
 import Form from "../../lib/components/form/Form";
 import FormInput from "../../lib/components/form/FormInput";
 import FormPhone from "../../lib/components/form/FormPhone";
 import { Button } from "../../lib/components/reusable/Button";
+import AuthHeader from "../../lib/styles/customTheme/components/AuthHeader";
 
 const Signup = () => {
   return (
@@ -13,7 +14,7 @@ const Signup = () => {
         subtitle="Fill the form below to create an account"
         img="signup"
       />
-      <Form onSubmit={(values) => console.log(values)}>
+      <Form onSubmit={(values) => values}>
         <Stack spacing="1.5rem" mt={6}>
           <FormInput name="firstName" label="First Name" placeholder="John" />
           <FormInput name="lastName" label="Last Name" placeholder="Doe" />

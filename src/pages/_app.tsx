@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { Box, ChakraProvider } from "@chakra-ui/react";
+import { ChakraProvider } from "@chakra-ui/react";
 import type { EmotionCache } from "@emotion/cache";
 import { CacheProvider } from "@emotion/react";
 import { DefaultSeo } from "next-seo";
@@ -12,7 +12,6 @@ import { theme } from "../lib/styles/customTheme/theme";
 import Layout from "lib/components/layout";
 import createEmotionCache from "lib/styles/createEmotionCache";
 import "lib/styles/globals.css";
-import MobileNavDrawer from "../lib/MobileNavDrawer";
 
 const clientSideEmotionCache = createEmotionCache();
 

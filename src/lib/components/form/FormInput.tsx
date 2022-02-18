@@ -1,7 +1,14 @@
-import { FormControl, FormLabel } from "@chakra-ui/form-control";
-import { Input, InputGroup, InputRightElement } from "@chakra-ui/input";
-import type { IconProps } from "@chakra-ui/react";
-import { Flex, FormErrorMessage, Icon, Link } from "@chakra-ui/react";
+import {
+  Flex,
+  FormControl,
+  FormLabel,
+  FormErrorMessage,
+  Icon,
+  Input,
+  InputGroup,
+  InputRightElement,
+  Link,
+} from "@chakra-ui/react";
 import NextLink from "next/link";
 import { forwardRef } from "react";
 import type { PropsWithoutRef, ComponentPropsWithoutRef } from "react";
@@ -18,10 +25,11 @@ export interface LabeledTextFieldProps
   outerProps?: PropsWithoutRef<JSX.IntrinsicElements["div"]>;
   labelProps?: ComponentPropsWithoutRef<"label">;
   state?: string;
-  icon?: IconProps;
+  icon?: any;
 }
 
 const FormInput = forwardRef<HTMLInputElement, LabeledTextFieldProps>(
+  // eslint-disable-next-line react/prop-types
   ({ label, state, outerProps, icon, labelProps, name, ...props }) => {
     const {
       register,

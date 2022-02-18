@@ -1,5 +1,3 @@
-import React from "react";
-import AuthHeader from "../lib/styles/customTheme/components/AuthHeader";
 import {
   Accordion,
   AccordionItem,
@@ -10,10 +8,12 @@ import {
   Stack,
   Box,
 } from "@chakra-ui/react";
+
 import Form from "../lib/components/form/Form";
 import FormInput from "../lib/components/form/FormInput";
 import FormTextarea from "../lib/components/form/FormTextarea";
 import { Button } from "../lib/components/reusable/Button";
+import AuthHeader from "../lib/styles/customTheme/components/AuthHeader";
 
 const Support = () => {
   return (
@@ -28,7 +28,7 @@ const Support = () => {
         subtitle="Type in your message and we will be sure to get back to you!"
       />
 
-      <Form onSubmit={(values) => console.log(values)}>
+      <Form onSubmit={(values) => values}>
         <Stack spacing="1.5rem" w={{ md: 108 }}>
           <FormInput name="name" label="Name" placeholder="John Doe" />
           <FormInput

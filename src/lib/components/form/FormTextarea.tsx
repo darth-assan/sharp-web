@@ -1,13 +1,15 @@
-import { forwardRef, PropsWithoutRef, ComponentPropsWithoutRef } from "react";
-import { useFormContext } from "react-hook-form";
-import { Input } from "@chakra-ui/input";
-import { FormControl, FormLabel } from "@chakra-ui/form-control";
+import type { Input } from "@chakra-ui/react";
 import {
   FormErrorMessage,
   FormHelperText,
+  FormControl,
+  FormLabel,
   Stack,
   Textarea,
 } from "@chakra-ui/react";
+import type { PropsWithoutRef, ComponentPropsWithoutRef } from "react";
+import { forwardRef } from "react";
+import { useFormContext } from "react-hook-form";
 
 export interface LabeledTextFieldProps
   extends ComponentPropsWithoutRef<typeof Input> {
@@ -24,6 +26,7 @@ export interface LabeledTextFieldProps
 }
 
 const FormTextarea = forwardRef<HTMLInputElement, LabeledTextFieldProps>(
+  // eslint-disable-next-line react/prop-types
   ({ label, state, outerProps, labelProps, name, helper, ...props }) => {
     const {
       register,

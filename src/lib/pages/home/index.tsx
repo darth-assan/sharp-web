@@ -9,8 +9,9 @@ import {
   Text,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import AuthHeader from "../../styles/customTheme/components/AuthHeader";
+
 import { Button } from "../../components/reusable/Button";
+import AuthHeader from "../../styles/customTheme/components/AuthHeader";
 
 const Home = () => {
   return (
@@ -115,10 +116,6 @@ const Home = () => {
           <Image src="/images/phones.png" alt="phones" />
         </Grid>
       </Box>
-
-      {/*<Box>*/}
-      {/*  <Image src="/images/home-mobile.png" alt="mobile download" />*/}
-      {/*</Box>*/}
     </Stack>
   );
 };

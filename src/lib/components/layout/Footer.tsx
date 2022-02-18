@@ -5,7 +5,6 @@ import {
   Heading,
   HStack,
   Image,
-  Link,
   List,
   ListItem,
   Stack,

@@ -1,31 +1,31 @@
 /* Global Styling here */
 .form-control {
-    background-color: white !important;
-    color: #E3A828;
-    height: 48px !important;
-    width: 100% !important;
-    border-radius: 2px;
+  background-color: white !important;
+  color: #e3a828;
+  height: 48px !important;
+  width: 100% !important;
+  border-radius: 2px;
 }
 .react-tel-input .form-control {
-    padding-left: 58px !important;
+  padding-left: 58px !important;
 }
 .react-tel-input {
-    border-width: 0.5px !important;
-    border-color: rgb(226, 232, 240) !important;
-    border-radius: 2px;
+  border-width: 0.5px !important;
+  border-color: rgb(226, 232, 240) !important;
+  border-radius: 2px;
 }
 
 .react-tel-input:hover {
-    border-color: #E3A828 !important;
+  border-color: #e3a828 !important;
 }
 
 .react-tel-input:focus {
-    border-width: 1px !important;
-    border-color: #E3A828 !important;
-    border-radius: 2px;
+  border-width: 1px !important;
+  border-color: #e3a828 !important;
+  border-radius: 2px;
 }
 
 .flag-dropdown {
-    background-color: white !important;
-    width: 50px;
+  background-color: white !important;
+  width: 50px;
 }

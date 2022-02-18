@@ -18,6 +18,7 @@ export const theme = extendTheme({
     global: () => ({
       body: {
         fontSize: "md",
+        // eslint-disable-next-line sonarjs/no-duplicate-string
         fontFamily: '"Inter", sans-serif',
         lineHeight: "tall",
       },

@@ -9,6 +9,7 @@ import {
 } from "@chakra-ui/react";
 import NextLink from "next/link";
 import { BiMenu } from "react-icons/bi";
+
 import { Button } from "../reusable/Button";
 
 const Header = ({ onOpen }: { onOpen: () => void }) => {

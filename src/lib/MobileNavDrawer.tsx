@@ -1,4 +1,3 @@
-import React from "react";
 import {
   Box,
   HStack,
@@ -11,8 +10,8 @@ import {
   Stack,
 } from "@chakra-ui/react";
 import NextLink from "next/link";
-import { GrFormClose } from "react-icons/gr";
 import { useRouter } from "next/router";
+import { GrFormClose } from "react-icons/gr";
 
 const links = [
   { id: 1, title: "Home", path: "/" },
@@ -48,6 +47,7 @@ const MobileNavDrawer = ({ onClose }: { onClose: () => void }) => {
           {links.map((link) => (
             <ListItem key={link.id}>
               <NextLink href={link.path} passHref>
+                {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                 <Link
                   color={link.path === pathname ? "brand.primary" : "gray.600"}
                   fontWeight={link.path === pathname ? "bold" : "normal"}

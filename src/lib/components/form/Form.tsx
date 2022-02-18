@@ -1,8 +1,11 @@
-import { useState, ReactNode, PropsWithoutRef } from "react";
-import { FormProvider, useForm, UseFormProps } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
 import { useToast } from "@chakra-ui/react";
+import { zodResolver } from "@hookform/resolvers/zod";
+import type { ReactNode, PropsWithoutRef } from "react";
+import { useState } from "react";
+import type { UseFormProps } from "react-hook-form";
+import { FormProvider, useForm } from "react-hook-form";
+import type { z } from "zod";
+
 import { Button } from "../reusable/Button";
 
 export interface FormProps<S extends z.ZodType<any, any>>
@@ -46,6 +49,7 @@ function Form<S extends z.ZodType<any, any>>({
       <form
         onSubmit={ctx.handleSubmit(async (values) => {
           const result = (await onSubmit(values)) || {};
+          // eslint-disable-next-line no-restricted-syntax
           for (const [key, value] of Object.entries(result)) {
             if (key === FORM_ERROR) {
               setFormError(value);

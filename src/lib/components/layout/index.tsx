@@ -1,9 +1,10 @@
 import { Box, useDisclosure } from "@chakra-ui/react";
 import type { ReactNode } from "react";
 
+import MobileNavDrawer from "../../MobileNavDrawer";
+
 import Footer from "./Footer";
 import Header from "./Header";
-import MobileNavDrawer from "../../MobileNavDrawer";
 
 type LayoutProps = {
   children: ReactNode;

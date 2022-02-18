@@ -1,4 +1,5 @@
-import { Heading, Image, Stack, StackProps, Text } from "@chakra-ui/react";
+import { Heading, Image, Stack, Text } from "@chakra-ui/react";
+import type { StackProps } from "@chakra-ui/react";
 
 const AuthHeader = ({
   title,

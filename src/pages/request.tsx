@@ -9,8 +9,8 @@ import {
   Text,
 } from "@chakra-ui/react";
 import React from "react";
-import { BounceLoader } from "react-spinners";
 import ReactStars from "react-rating-stars-component";
+import { BounceLoader } from "react-spinners";
 
 import FileUpload from "../lib/components/form/FileUpload";
 import Form from "../lib/components/form/Form";
@@ -27,8 +27,8 @@ const Request = () => {
     setState((prevState) => prevState + 1);
   };
 
-  const ratingChanged = (newRating: any) => {
-    console.log(newRating);
+  const ratingChanged = (newRating: null) => {
+    return newRating;
   };
 
   const renderTemplate = (value: number) => {
@@ -172,7 +172,7 @@ const Request = () => {
           </HStack>
         </Stack>
 
-        <Form onSubmit={(values) => console.log(values)}>
+        <Form onSubmit={(values) => values}>
           <Stack spacing="2rem">
             {renderTemplate(state)}
             <Button

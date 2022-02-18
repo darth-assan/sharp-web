@@ -1,5 +1,5 @@
-import React from "react";
 import { FormControl, FormLabel } from "@chakra-ui/react";
+import React from "react";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 
@@ -11,7 +11,7 @@ const FormPhone = ({ label }: { label: string }) => {
         {label}
       </FormLabel>
       <PhoneInput
-        country={"gh"}
+        country="gh"
         value={phone}
         onChange={(formattedValue) => setPhone(formattedValue)}
       />

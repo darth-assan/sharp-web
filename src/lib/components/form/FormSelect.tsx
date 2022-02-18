@@ -1,8 +1,13 @@
-import { forwardRef, PropsWithoutRef, ComponentPropsWithoutRef } from "react";
+import type { Input } from "@chakra-ui/input";
+import {
+  FormControl,
+  FormLabel,
+  Flex,
+  FormErrorMessage,
+} from "@chakra-ui/react";
+import type { PropsWithoutRef, ComponentPropsWithoutRef } from "react";
+import { forwardRef } from "react";
 import { useFormContext, Controller } from "react-hook-form";
-import { Input } from "@chakra-ui/input";
-import { FormControl, FormLabel } from "@chakra-ui/form-control";
-import { Flex, FormErrorMessage } from "@chakra-ui/react";
 import Select from "react-select";
 
 interface OptionProps {
@@ -24,6 +29,7 @@ export interface LabeledSelectFieldProps
 }
 
 const FormSelect = forwardRef<HTMLInputElement, LabeledSelectFieldProps>(
+  // eslint-disable-next-line react/prop-types
   ({ label, outerProps, labelProps, name, options }) => {
     const {
       formState: { isSubmitting, errors },

@@ -1,12 +1,12 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import { FC, MouseEventHandler } from 'react'
-import { FiX } from 'react-icons/fi'
-import { Text, Fade, Flex, IconButton } from '@chakra-ui/react'
+import { Text, Fade, Flex, IconButton } from "@chakra-ui/react";
+import type { FC, MouseEventHandler } from "react";
+import { FiX } from "react-icons/fi";
 
 interface IProps {
-  error: any
-  touched?: boolean
-  onClear: MouseEventHandler<HTMLElement>
+  error: any;
+  touched?: boolean;
+  onClear: MouseEventHandler<HTMLElement>;
 }
 
 const FormErrorHandler: FC<IProps> = ({ onClear, error, touched }) => {
@@ -27,7 +27,7 @@ const FormErrorHandler: FC<IProps> = ({ onClear, error, touched }) => {
         <Text
           fontSize="xs"
           dangerouslySetInnerHTML={{
-            __html: error
+            __html: error,
           }}
         />
         <IconButton
@@ -36,13 +36,13 @@ const FormErrorHandler: FC<IProps> = ({ onClear, error, touched }) => {
           bg="transparent"
           aria-label="close"
           onClick={onClear}
-          _hover={{ bg: 'transparent' }}
-          _focus={{ bg: 'transparent' }}
-          _active={{ bg: 'transparent' }}
+          _hover={{ bg: "transparent" }}
+          _focus={{ bg: "transparent" }}
+          _active={{ bg: "transparent" }}
         />
       </Flex>
     </Fade>
-  )
-}
+  );
+};
 
-export default FormErrorHandler
+export default FormErrorHandler;
