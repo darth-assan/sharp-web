@@ -2,8 +2,8 @@ import React from "react";
 import { Stack } from "@chakra-ui/react";
 import AuthHeader from "../../lib/styles/customTheme/components/AuthHeader";
 import Form from "../../lib/components/form/Form";
-import FormPhone from "../../lib/components/form/FormPhone";
-import { Button } from "../../lib/components/reusable/Button";
+import FormPhone from "../../lib/components/form/FormPhone"
+import { Button } from "../../lib/components/reusable/Button"
 
 const Signin = () => {
   return (
