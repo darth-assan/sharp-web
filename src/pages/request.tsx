@@ -63,6 +63,7 @@ const Request = () => {
         return (
           <FileUpload
             label="Add a photo"
+            name="photo"
             helper="(Please provide images with a clear shot of the problem)"
           />
         );
