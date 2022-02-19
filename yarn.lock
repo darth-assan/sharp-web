@@ -1792,6 +1792,11 @@
   resolved "https://registry.yarnpkg.com/@fontsource/montserrat/-/montserrat-4.5.3.tgz#30e8943df4f9904b7379a27304073837193b53b3"
   integrity sha512-VT+wPK/PHWwqm7r6UbTjI+oj31obzj9+V9HSUl8tcuKtv4deYuH+OAbMf5RG62uVDT8wiZ8QyCbr5gmfHQ3ykg==
 
+"@fontsource/poppins@^4.5.1":
+  version "4.5.1"
+  resolved "https://registry.yarnpkg.com/@fontsource/poppins/-/poppins-4.5.1.tgz#0e2f112dff4319cd04a6622473f23496086a9587"
+  integrity sha512-7GlOGkOElhBVE5RHT33p7w9YDgiXHwx6W5TfBx2UDba8sydY17CRcAnY912/SfaAfkoDU71i+RbIwGfQMQxNlw==
+
 "@hookform/resolvers@^2.8.8":
   version "2.8.8"
   resolved "https://registry.yarnpkg.com/@hookform/resolvers/-/resolvers-2.8.8.tgz#17cf806485435877fdafce9f3bee6ff68f7f87b6"

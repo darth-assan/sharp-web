@@ -8,34 +8,69 @@ import {
   Stack,
   Text,
 } from "@chakra-ui/react";
+import { motion } from "framer-motion";
 import NextLink from "next/link";
 
 import { Button } from "../../components/reusable/Button";
 import AuthHeader from "../../styles/customTheme/components/AuthHeader";
 
+const MotionHeading = motion(Heading);
+const MotionText = motion(Text);
+const MotionLink = motion(Link);
+const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
+
 const Home = () => {
   return (
-    <Stack>
-      <HStack bg="gray.50" p={{ md: 32 }}>
-        <Stack w={{ md: "60%" }} spacing="1rem">
-          <Heading as="h2" fontSize={{ md: "6xl" }}>
-            Lorem ipsum dolor sit, consectetur adipiscing.
-          </Heading>
-          <Text fontSize="xl">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </Text>
+    <Stack spacing="0rem">
+      <HStack bg="gray.50" pl={{ md: 20 }} spacing="5rem">
+        <Stack w={{ md: "30%" }} spacing="1rem">
+          <MotionHeading
+            as="h2"
+            fontSize={{ md: "6xl" }}
+            initial={{ opacity: 0, x: -300 }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 0.3, ...transition },
+            }}
+          >
+            Secure quality efficient and professional services
+          </MotionHeading>
+          <MotionText
+            fontSize="xl"
+            initial={{ opacity: 0, x: -300 }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 0.6, ...transition },
+            }}
+          >
+            Obtain professional services with this flexible app that links you
+            to responsive Service Providers
+          </MotionText>
           <NextLink href="/request" passHref>
-            <Link _hover={{ textDecor: "none" }} width={{ md: 40 }}>
+            <MotionLink
+              _hover={{ textDecor: "none" }}
+              width={{ md: 40 }}
+              initial={{ opacity: 0, x: -300 }}
+              animate={{
+                opacity: 1,
+                x: 0,
+                transition: { delay: 0.8, ...transition },
+              }}
+            >
               <Button
                 title="Request Serpro"
                 colorScheme="primaryButton"
                 color="black"
-                width={{ md: 40 }}
+                width={{ md: 56 }}
               />
-            </Link>
+            </MotionLink>
           </NextLink>
         </Stack>
-        <Image src="/images/home.png" />
+        <Box w={{ md: "70%" }}>
+          <Image src="/images/home-banner.jpg" />
+        </Box>
       </HStack>
 
       <Stack d={{ base: "block", md: "none" }} spacing="1.5rem" margin="8">
@@ -51,38 +86,49 @@ const Home = () => {
         />
       </Stack>
 
-      <Box bg="brand.accent" p={{ base: 10, md: 32 }}>
+      <Box bg="brand.accent" p={{ base: 10, md: 48 }}>
         <Grid templateColumns={{ md: "repeat(3, 1fr)" }} gap={6}>
           <Stack>
+            <Image w={16} h={16} src="/images/bandwidth.png" alt="speed" />
             <Heading as="h5" fontSize="xl">
-              Lorem ipsum dolor sit amet
+              Speed of use
             </Heading>
             <Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              this app is a handy tool that can be accessed anytime and anywhere
+              for both Customers and Serpros
             </Text>
           </Stack>
 
           <Stack>
+            <Image w={16} h={16} src="/images/idea.png" alt="Smart" />
             <Heading as="h5" fontSize="xl">
-              Lorem ipsum dolor sit amet
+              Smart
             </Heading>
             <Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              the app ensures that available and reliable Serpros are obtained
+              by Customers at all times.
             </Text>
           </Stack>
 
           <Stack>
+            <Image
+              w={16}
+              h={16}
+              src="/images/satisfaction.png"
+              alt="satisfaction"
+            />
             <Heading as="h5" fontSize="xl">
-              Lorem ipsum dolor sit amet
+              Satisfaction
             </Heading>
             <Text>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              the app guarantees the satisfaction of both Customers and Serpros
+              at an affordable cost.
             </Text>
           </Stack>
         </Grid>
       </Box>
 
-      <Box bg="gray.50" p={{ md: 32 }}>
+      <Box bg="gray.50" p={{ md: 48 }}>
         <Grid
           templateColumns={{ md: "repeat(2, 1fr)" }}
           gap={{ md: 12 }}

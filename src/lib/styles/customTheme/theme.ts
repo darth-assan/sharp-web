@@ -1,6 +1,8 @@
 import { extendTheme } from "@chakra-ui/react";
 import { createBreakpoints } from "@chakra-ui/theme-tools";
 
+import fonts from "./fonts";
+
 const breakpoints = createBreakpoints({
   sm: "40rem", // 640px
   md: "48em", // 768
@@ -19,16 +21,13 @@ export const theme = extendTheme({
       body: {
         fontSize: "md",
         // eslint-disable-next-line sonarjs/no-duplicate-string
-        fontFamily: '"Inter", sans-serif',
+        fontFamily: '"Poppins", sans-serif',
         lineHeight: "tall",
       },
     }),
   },
   breakpoints,
-  fonts: {
-    heading: '"Inter", sans-serif',
-    body: '"Inter", sans-serif',
-  },
+  fonts,
   fontSizes: {
     xx: ".55rem",
     tiny: ".68rem",

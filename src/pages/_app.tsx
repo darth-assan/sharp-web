@@ -5,7 +5,7 @@ import { CacheProvider } from "@emotion/react";
 import { DefaultSeo } from "next-seo";
 import type { AppProps } from "next/app";
 import Head from "next/head";
-import "@fontsource/inter/variable.css";
+import "@fontsource/poppins";
 
 import defaultSEOConfig from "../../next-seo.config";
 import { theme } from "../lib/styles/customTheme/theme";

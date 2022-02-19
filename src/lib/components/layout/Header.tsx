@@ -20,6 +20,7 @@ const Header = ({ onOpen }: { onOpen: () => void }) => {
       align="center"
       justify="space-between"
       px={{ base: 2, md: 20 }}
+      h={{ md: 20 }}
     >
       <NextLink href="/" passHref>
         <Link>
