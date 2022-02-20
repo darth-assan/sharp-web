@@ -21,7 +21,7 @@ const Support = () => {
       spacing="2rem"
       marginY={{ base: "8", md: 20 }}
       divider={<Divider />}
-      px={{ md: 32 }}
+      px={{ base: 6, md: 32 }}
     >
       <AuthHeader
         title="How Can We Help You?"

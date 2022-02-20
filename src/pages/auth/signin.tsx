@@ -7,7 +7,13 @@ import AuthHeader from "../../lib/styles/customTheme/components/AuthHeader";
 
 const Signin = () => {
   return (
-    <Stack spacing="1rem" w={{ md: 120 }} mx="auto" mb={10}>
+    <Stack
+      spacing="1rem"
+      w={{ md: 120 }}
+      mx="auto"
+      mb={10}
+      px={{ base: 6, md: 0 }}
+    >
       <AuthHeader
         title="LOG IN"
         subtitle="Enter your account credentials to login"
