@@ -22,7 +22,12 @@ const transition = { duration: 0.6, ease: [0.43, 0.13, 0.23, 0.96] };
 const Home = () => {
   return (
     <Stack spacing="0rem">
-      <HStack bg="gray.50" pl={{ md: 20 }} spacing="5rem">
+      <HStack
+        d={{ base: "none", md: "flex" }}
+        bg="gray.50"
+        pl={{ md: 20 }}
+        spacing={{ md: "5rem" }}
+      >
         <Stack w={{ md: "30%" }} spacing="1rem">
           <MotionHeading
             as="h2"
@@ -73,17 +78,38 @@ const Home = () => {
         </Box>
       </HStack>
 
-      <Stack d={{ base: "block", md: "none" }} spacing="1.5rem" margin="8">
+      <Stack
+        d={{ base: "block", md: "none" }}
+        spacing="1.5rem"
+        px={{ base: 5, md: 0 }}
+        h={120}
+        pt={10}
+      >
         <AuthHeader
-          title="Lorem ipsum dolor sit, consectetur adipiscing."
-          subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit."
-          img="home"
+          title="Secure quality efficient and professional services"
+          subtitle="Obtain professional services with this flexible app that links you
+            to responsive Service Providers"
+          image="home-banner.jpg"
         />
-        <Button
-          title="Request Serpro"
-          colorScheme="primaryButton"
-          color="black"
-        />
+        <NextLink href="/request" passHref>
+          <MotionLink
+            d="block"
+            _hover={{ textDecor: "none" }}
+            width={{ md: 40 }}
+            initial={{ opacity: 0, x: -300 }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: { delay: 0.8, ...transition },
+            }}
+          >
+            <Button
+              title="Request Serpro"
+              colorScheme="primaryButton"
+              color="black"
+            />
+          </MotionLink>
+        </NextLink>
       </Stack>
 
       <Box bg="brand.accent" p={{ base: 10, md: 48 }}>
@@ -128,31 +154,31 @@ const Home = () => {
         </Grid>
       </Box>
 
-      <Box bg="gray.50" p={{ md: 48 }}>
+      <Box bg="gray.50" p={{ base: 6, md: 48 }} py={{ base: 20, md: 48 }}>
         <Grid
           templateColumns={{ md: "repeat(2, 1fr)" }}
-          gap={{ md: 12 }}
+          gap={{ base: 6, md: 12 }}
           alignItems="center"
         >
           <Stack spacing="2rem">
-            <Heading as="h2" fontSize={{ md: "6xl" }}>
+            <Heading as="h2" fontSize={{ base: "4xl", md: "6xl" }}>
               Download the mobile app today!
             </Heading>
-            <Text fontSize="lg">
+            <Text fontSize={{ md: "lg" }}>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis
               porttitor aliquam nulla feugiat duis vitae ipsum malesuada.
             </Text>
             <HStack spacing="2rem">
               <Box as="button" role="button" aria-label="playstore button">
                 <Image
-                  h={{ md: 14 }}
+                  h={{ base: 10, md: 14 }}
                   src="/images/playstore.png"
                   alt="playstore"
                 />
               </Box>
               <Box as="button" role="button" aria-label="appstore button">
                 <Image
-                  h={{ md: 14 }}
+                  h={{ base: 10, md: 14 }}
                   src="/images/appstore.png"
                   alt="appstore"
                 />
