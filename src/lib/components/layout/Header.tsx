@@ -10,8 +10,6 @@ import {
 import NextLink from "next/link";
 import { BiMenu } from "react-icons/bi";
 
-import { Button } from "../reusable/Button";
-
 const Header = ({ onOpen }: { onOpen: () => void }) => {
   return (
     <Flex
@@ -21,6 +19,8 @@ const Header = ({ onOpen }: { onOpen: () => void }) => {
       justify="space-between"
       px={{ base: 2, md: 20 }}
       h={{ md: 20 }}
+      bg="black"
+      color="white"
     >
       <NextLink href="/" passHref>
         <Link>
@@ -40,19 +40,6 @@ const Header = ({ onOpen }: { onOpen: () => void }) => {
         </NextLink>
         <NextLink href="/about" passHref>
           <Link _hover={{ textDecor: "none" }}>About Us</Link>
-        </NextLink>
-      </HStack>
-
-      <HStack spacing="2rem" d={{ base: "none", md: "flex" }}>
-        <NextLink href="/auth/signin" passHref>
-          <Link _hover={{ textDecor: "none" }}>
-            <Button title="Log In" variant="outline" />
-          </Link>
-        </NextLink>
-        <NextLink href="/auth/signup" passHref>
-          <Link _hover={{ textDecor: "none" }}>
-            <Button title="Sign Up" color="black" />
-          </Link>
         </NextLink>
       </HStack>
 

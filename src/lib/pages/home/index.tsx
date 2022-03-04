@@ -74,7 +74,7 @@ const Home = () => {
           </NextLink>
         </Stack>
         <Box w={{ md: "70%" }}>
-          <Image src="/images/home-banner.jpg" />
+          <Image src="/images/hero.jpg" />
         </Box>
       </HStack>
 
