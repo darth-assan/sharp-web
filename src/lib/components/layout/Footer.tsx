@@ -1,15 +1,15 @@
 import {
-  Box,
   Flex,
   Grid,
-  Heading,
-  HStack,
+  Icon,
   Image,
   List,
   ListItem,
   Stack,
-  Text,
 } from "@chakra-ui/react";
+import { BsArrowRight } from "react-icons/bs";
+
+import { Button } from "../reusable/Button";
 
 const Footer = () => {
   return (
@@ -17,75 +17,48 @@ const Footer = () => {
       as="footer"
       width="full"
       // align="center"
-      bg="brand.primary"
+      bg="black"
       py={{ base: 10, md: 20 }}
       px={{ base: 5, md: 48 }}
       direction="column"
+      color="white"
     >
       <Grid
-        templateColumns={{ md: "repeat(3, 1fr)" }}
+        templateColumns={{ md: "repeat(4, 1fr)" }}
         gap={10}
         alignItems="center"
       >
         <Stack spacing="0.2rem">
-          <Heading as="h4" fontSize={{ base: "2xl", md: "5xl" }}>
-            SHARP!
-          </Heading>
-          <Text>“We do all”</Text>
+          <Image
+            src="/images/sharp-footer-logo.png"
+            alt="sharp logo"
+            h={16}
+            w={32}
+          />
         </Stack>
 
         <Stack>
-          <Heading as="h5" fontSize="lg">
-            Quick Links
-          </Heading>
+          <Stack as={List} fontSize="sm">
+            <ListItem>About Us</ListItem>
+            <ListItem>Request a Serpro</ListItem>
+            <ListItem>Become a Serpro</ListItem>
+          </Stack>
+        </Stack>
+
+        <Stack>
           <Stack as={List} fontSize="sm">
             <ListItem>Home</ListItem>
-            <ListItem>Request an Artisan</ListItem>
-            <ListItem>FAQs</ListItem>
-            <ListItem>About Us</ListItem>
-            <ListItem>Privacy Policy</ListItem>
             <ListItem>Terms & Conditions</ListItem>
-            <ListItem>Create an Account</ListItem>
+            <ListItem>Privacy Policy</ListItem>
           </Stack>
         </Stack>
 
         <Stack justifyContent="space-between" spacing={{ base: 10, md: 24 }}>
-          <Box>
-            <Heading as="h5" fontSize="lg">
-              Email
-            </Heading>
-            <Text fontSize="sm">xxxxxx@gmail.com</Text>
-          </Box>
-
-          <Stack spacing="1.2rem">
-            <Box>
-              <Heading as="h5" fontSize="lg">
-                Download Our Mobile App
-              </Heading>
-              <Text fontSize="sm">
-                Connect with a Serpro with just a few clicks
-              </Text>
-            </Box>
-            <HStack align="center" spacing="2rem">
-              <Box>
-                <Image
-                  h={10}
-                  w="full"
-                  src="/images/playstore.png"
-                  alt="Platstore"
-                />
-              </Box>
-
-              <Box>
-                <Image
-                  h={10}
-                  w="full"
-                  src="/images/appstore.png"
-                  alt="AppStore"
-                />
-              </Box>
-            </HStack>
-          </Stack>
+          <Button
+            title="Contact Us"
+            rightIcon={<Icon as={BsArrowRight} />}
+            color="black"
+          />
         </Stack>
       </Grid>
     </Flex>

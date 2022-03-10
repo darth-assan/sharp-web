@@ -1,92 +1,94 @@
-import {
-  Accordion,
-  AccordionItem,
-  AccordionButton,
-  AccordionPanel,
-  AccordionIcon,
-  Divider,
-  Stack,
-  Box,
-} from "@chakra-ui/react";
+import { Stack, Box, Image, Flex } from "@chakra-ui/react";
 
+import FAQ from "../lib/components/FAQ";
 import Form from "../lib/components/form/Form";
 import FormInput from "../lib/components/form/FormInput";
 import FormTextarea from "../lib/components/form/FormTextarea";
 import { Button } from "../lib/components/reusable/Button";
+import { faqs } from "../lib/constant";
 import AuthHeader from "../lib/styles/customTheme/components/AuthHeader";
 
 const Support = () => {
   return (
-    <Stack
-      spacing="2rem"
-      marginY={{ base: "8", md: 20 }}
-      divider={<Divider />}
-      px={{ base: 6, md: 32 }}
-    >
-      <AuthHeader
-        title="How Can We Help You?"
-        subtitle="Type in your message and we will be sure to get back to you!"
-      />
+    <Stack>
+      <Box>
+        <Image src="/images/hero.jpg" alt="" />
+      </Box>
 
-      <Form onSubmit={(values) => values}>
-        <Stack spacing="1.5rem" w={{ md: 108 }}>
-          <FormInput name="name" label="Name" placeholder="John Doe" />
-          <FormInput
-            name="email"
-            label="Email"
-            placeholder="johndoe@email.com"
-            type="email"
-          />
-          <FormTextarea
-            name="message"
-            label="Message"
-            placeholder="Type your message here..."
-          />
-          <Button title="Submit" colorScheme="primaryButton" color="black" />
-        </Stack>
-      </Form>
+      <Stack>
+        <Flex
+          bg="brand.accent"
+          p={{ base: 6, md: 48 }}
+          py={{ base: 20, md: 28 }}
+          align="center"
+          justify="center"
+          direction="column"
+        >
+          <Stack spacing="4rem">
+            <AuthHeader
+              title="How Can We Help You?"
+              subtitle="Type in your message and we will be sure to get back to you!"
+              textAlign="center"
+            />
+            <Form onSubmit={(values) => values}>
+              <Stack spacing="1.5rem" w={{ md: 108 }}>
+                <FormInput
+                  bg="white"
+                  name="name"
+                  label="Name"
+                  placeholder="John Doe"
+                />
+                <FormInput
+                  bg="white"
+                  name="phoneNumber"
+                  label="Phone Number"
+                  placeholder="555-555-5555"
+                  type="tel"
+                />
+                <FormInput
+                  bg="white"
+                  name="email"
+                  label="Email"
+                  placeholder="johndoe@email.com"
+                  type="email"
+                />
+                <FormTextarea
+                  bg="white"
+                  name="message"
+                  label="Message"
+                  placeholder="Type your message here..."
+                />
+                <Button
+                  title="Submit"
+                  colorScheme="primaryButton"
+                  color="black"
+                />
+              </Stack>
+            </Form>
+          </Stack>
+        </Flex>
 
-      <Stack spacing="1.5rem">
-        <AuthHeader
-          title="FAQs"
-          subtitle="Got a question? Here are some of our most frequently asked questions"
-        />
+        <Box bg="white" py={{ md: 20 }}>
+          <Stack
+            w={{ md: 125 }}
+            align="center"
+            justify="center"
+            mx="auto"
+            spacing="4rem"
+          >
+            <AuthHeader
+              title="Frequently Asked Questions"
+              subtitle="Got a question? Here are some of our most frequently asked questions"
+              textAlign="center"
+            />
 
-        <Accordion allowMultiple>
-          <AccordionItem>
-            <h2>
-              <AccordionButton>
-                <Box flex="1" textAlign="left">
-                  Section 1 title
-                </Box>
-                <AccordionIcon />
-              </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </AccordionPanel>
-          </AccordionItem>
-
-          <AccordionItem>
-            <h2>
-              <AccordionButton>
-                <Box flex="1" textAlign="left">
-                  Section 2 title
-                </Box>
-                <AccordionIcon />
-              </AccordionButton>
-            </h2>
-            <AccordionPanel pb={4}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat.
-            </AccordionPanel>
-          </AccordionItem>
-        </Accordion>
+            <Box>
+              {faqs.map((item) => (
+                <FAQ key={item.id} title={item.title} />
+              ))}
+            </Box>
+          </Stack>
+        </Box>
       </Stack>
     </Stack>
   );

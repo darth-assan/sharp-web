@@ -32,14 +32,20 @@ const Header = ({ onOpen }: { onOpen: () => void }) => {
         <NextLink href="/" passHref>
           <Link _hover={{ textDecor: "none" }}>Home</Link>
         </NextLink>
+        <NextLink href="/about" passHref>
+          <Link _hover={{ textDecor: "none" }}>About Us</Link>
+        </NextLink>
+        <NextLink href="/request" passHref>
+          <Link _hover={{ textDecor: "none" }}>Become a Serpro</Link>
+        </NextLink>
         <NextLink href="/request" passHref>
           <Link _hover={{ textDecor: "none" }}>Request a Serpro</Link>
         </NextLink>
         <NextLink href="/support" passHref>
           <Link _hover={{ textDecor: "none" }}>Help</Link>
         </NextLink>
-        <NextLink href="/about" passHref>
-          <Link _hover={{ textDecor: "none" }}>About Us</Link>
+        <NextLink href="/contact" passHref>
+          <Link _hover={{ textDecor: "none" }}>Contact Us</Link>
         </NextLink>
       </HStack>
 

@@ -25,12 +25,10 @@ const Layout = ({ children }: LayoutProps) => {
           <MobileNavDrawer onClose={onClose} />
         </Box>
       )}
-      <Box mx={8} mt={8}>
+      <Box>
         <Header onOpen={onOpen} />
       </Box>
-      <Box as="main" marginTop={22}>
-        {children}
-      </Box>
+      <Box as="main">{children}</Box>
 
       <Footer />
     </Box>

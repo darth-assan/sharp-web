@@ -1,8 +1,8 @@
 import {
   Box,
-  Grid,
   Heading,
   HStack,
+  Icon,
   Image,
   Link,
   Stack,
@@ -10,9 +10,13 @@ import {
 } from "@chakra-ui/react";
 import { motion } from "framer-motion";
 import NextLink from "next/link";
+import { BiTime } from "react-icons/bi";
 
+import FAQ from "../../components/FAQ";
 import { Button } from "../../components/reusable/Button";
-import AuthHeader from "../../styles/customTheme/components/AuthHeader";
+import { faqs } from "../../constant";
+
+import AboutItem from "./components/AboutItem";
 
 const MotionHeading = motion(Heading);
 const MotionText = motion(Text);
@@ -24,11 +28,14 @@ const Home = () => {
     <Stack spacing="0rem">
       <HStack
         d={{ base: "none", md: "flex" }}
-        bg="gray.50"
         pl={{ md: 20 }}
         spacing={{ md: "5rem" }}
+        bg="black"
+        color="white"
+        h={120}
+        pos="relative"
       >
-        <Stack w={{ md: "30%" }} spacing="1rem">
+        <Stack w={{ md: "50%" }} spacing="1rem">
           <MotionHeading
             as="h2"
             fontSize={{ md: "6xl" }}
@@ -50,144 +57,168 @@ const Home = () => {
               transition: { delay: 0.6, ...transition },
             }}
           >
-            Obtain professional services with this flexible app that links you
-            to responsive Service Providers
+            Obtain professional services with this flexible app <br />
+            that links you to responsive Service Providers
           </MotionText>
-          <NextLink href="/request" passHref>
-            <MotionLink
-              _hover={{ textDecor: "none" }}
-              width={{ md: 40 }}
-              initial={{ opacity: 0, x: -300 }}
-              animate={{
-                opacity: 1,
-                x: 0,
-                transition: { delay: 0.8, ...transition },
-              }}
-            >
-              <Button
-                title="Request Serpro"
-                colorScheme="primaryButton"
-                color="black"
-                width={{ md: 56 }}
-              />
-            </MotionLink>
-          </NextLink>
+          <HStack spacing="5rem">
+            <NextLink href="/request" passHref>
+              <MotionLink
+                _hover={{ textDecor: "none" }}
+                width={{ md: 40 }}
+                initial={{ opacity: 0, x: -300 }}
+                animate={{
+                  opacity: 1,
+                  x: 0,
+                  transition: { delay: 0.8, ...transition },
+                }}
+                d="block"
+              >
+                <Button
+                  title="Become A Serpro"
+                  colorScheme="primaryButton"
+                  color="black"
+                  width={{ md: 56 }}
+                />
+              </MotionLink>
+            </NextLink>
+
+            <NextLink href="/request" passHref>
+              <MotionLink
+                _hover={{ textDecor: "none" }}
+                width={{ md: 40 }}
+                initial={{ opacity: 0, x: -300 }}
+                animate={{
+                  opacity: 1,
+                  x: 0,
+                  transition: { delay: 0.8, ...transition },
+                }}
+                d="block"
+              >
+                <Button
+                  title="Request Serpro"
+                  colorScheme="primaryButton"
+                  color="black"
+                  width={{ md: 56 }}
+                />
+              </MotionLink>
+            </NextLink>
+          </HStack>
         </Stack>
-        <Box w={{ md: "70%" }}>
-          <Image src="/images/hero.jpg" />
+        <Box w={{ md: "50%" }} pos="absolute" bottom={0} right={0}>
+          <Image src="/images/home-img.png" />
         </Box>
       </HStack>
 
+      <Box p={{ base: 6, md: 48 }} py={{ base: 20, md: 48 }}>
+        <Stack textAlign="center" spacing="4rem">
+          <Heading>Who We Are</Heading>
+
+          <HStack>
+            <Stack textAlign="center" align="center">
+              <Icon as={BiTime} boxSize={20} />
+              <Text
+                fontSize={{ md: "lg" }}
+                css={{
+                  "::first-letter": {
+                    fontWeight: 900,
+                  },
+                }}
+              >
+                Speed of Use
+              </Text>
+            </Stack>
+          </HStack>
+        </Stack>
+      </Box>
+
       <Stack
-        d={{ base: "block", md: "none" }}
-        spacing="1.5rem"
-        px={{ base: 5, md: 0 }}
-        h={120}
-        pt={10}
+        spacing="8rem"
+        bg="brand.primary"
+        p={{ base: 6, md: 48 }}
+        py={{ base: 20, md: 48 }}
       >
-        <AuthHeader
-          title="Secure quality efficient and professional services"
-          subtitle="Obtain professional services with this flexible app that links you
-            to responsive Service Providers"
-          image="home-banner.jpg"
+        <AboutItem
+          title="What is Sharp?"
+          text=" Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Ullamcorper sed consectetur arcu at velit. Et vel integer amet
+              curabitur egestas diam blandit vel. Lorem sapien, neque donec
+              sollicitudin. Justo, venenatis sit tellus et. Viverra etiam
+              maecenas ac turpis aliquam, eget velit maecenas. Donec quis mi
+              aliquam cursus mauris. Mauris risus sed auctor fringilla rhoncus
+              tortor sed. Egestas dignissim donec ornare id pellentesque
+              commodo. Dui morbi ullamcorper in iaculis erat tincidunt."
+          img="hero.jpg"
         />
-        <NextLink href="/request" passHref>
-          <MotionLink
-            d="block"
-            _hover={{ textDecor: "none" }}
-            width={{ md: 40 }}
-            initial={{ opacity: 0, x: -300 }}
-            animate={{
-              opacity: 1,
-              x: 0,
-              transition: { delay: 0.8, ...transition },
-            }}
-          >
-            <Button
-              title="Request Serpro"
-              colorScheme="primaryButton"
-              color="black"
-            />
-          </MotionLink>
-        </NextLink>
+        <AboutItem
+          title="What is Sharp?"
+          text=" Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+              Ullamcorper sed consectetur arcu at velit. Et vel integer amet
+              curabitur egestas diam blandit vel. Lorem sapien, neque donec
+              sollicitudin. Justo, venenatis sit tellus et. Viverra etiam
+              maecenas ac turpis aliquam, eget velit maecenas. Donec quis mi
+              aliquam cursus mauris. Mauris risus sed auctor fringilla rhoncus
+              tortor sed. Egestas dignissim donec ornare id pellentesque
+              commodo. Dui morbi ullamcorper in iaculis erat tincidunt."
+          img="hero.jpg"
+          flexDirection="row-reverse"
+        />
       </Stack>
 
-      <Box bg="brand.accent" p={{ base: 10, md: 48 }}>
-        <Grid templateColumns={{ md: "repeat(3, 1fr)" }} gap={6}>
-          <Stack>
-            <Image w={16} h={16} src="/images/bandwidth.png" alt="speed" />
-            <Heading as="h5" fontSize="xl">
-              Speed of use
-            </Heading>
+      <Box bg="white" p={{ md: 36 }}>
+        <Stack w={{ md: 125 }} mx="auto" spacing="4rem">
+          <Stack textAlign="center">
+            <Heading>Frequently Asked Questions</Heading>
             <Text>
-              this app is a handy tool that can be accessed anytime and anywhere
-              for both Customers and Serpros
+              Get answers to the frequently asked questions about SHARP!
             </Text>
           </Stack>
 
-          <Stack>
-            <Image w={16} h={16} src="/images/idea.png" alt="Smart" />
-            <Heading as="h5" fontSize="xl">
-              Smart
-            </Heading>
-            <Text>
-              the app ensures that available and reliable Serpros are obtained
-              by Customers at all times.
-            </Text>
-          </Stack>
-
-          <Stack>
-            <Image
-              w={16}
-              h={16}
-              src="/images/satisfaction.png"
-              alt="satisfaction"
-            />
-            <Heading as="h5" fontSize="xl">
-              Satisfaction
-            </Heading>
-            <Text>
-              the app guarantees the satisfaction of both Customers and Serpros
-              at an affordable cost.
-            </Text>
-          </Stack>
-        </Grid>
+          <Box>
+            {faqs.map((item) => (
+              <FAQ key={item.id} title={item.title} />
+            ))}
+          </Box>
+        </Stack>
       </Box>
 
-      <Box bg="gray.50" p={{ base: 6, md: 48 }} py={{ base: 20, md: 48 }}>
-        <Grid
-          templateColumns={{ md: "repeat(2, 1fr)" }}
-          gap={{ base: 6, md: 12 }}
-          alignItems="center"
-        >
-          <Stack spacing="2rem">
-            <Heading as="h2" fontSize={{ base: "4xl", md: "6xl" }}>
-              Download the mobile app today!
-            </Heading>
-            <Text fontSize={{ md: "lg" }}>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis
-              porttitor aliquam nulla feugiat duis vitae ipsum malesuada.
-            </Text>
-            <HStack spacing="2rem">
-              <Box as="button" role="button" aria-label="playstore button">
-                <Image
-                  h={{ base: 10, md: 14 }}
-                  src="/images/playstore.png"
-                  alt="playstore"
-                />
-              </Box>
-              <Box as="button" role="button" aria-label="appstore button">
-                <Image
-                  h={{ base: 10, md: 14 }}
-                  src="/images/appstore.png"
-                  alt="appstore"
-                />
-              </Box>
-            </HStack>
-          </Stack>
-          <Image src="/images/phones.png" alt="phones" />
-        </Grid>
-      </Box>
+      <HStack
+        spacing="8rem"
+        bg="brand.primary"
+        p={{ base: 6, md: 48 }}
+        py={{ base: 20, md: 48 }}
+      >
+        <Stack w={{ md: "50%" }}>
+          <Heading as="h3" fontSize={{ md: "5xl" }}>
+            Download the mobile app today!
+          </Heading>
+          <Text>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis
+            porttitor aliquam nulla feugiat duis vitae ipsum malesuada.
+          </Text>
+          <HStack align="center" spacing="2rem">
+            <Box>
+              <Image
+                h={10}
+                w="full"
+                src="/images/playstore.png"
+                alt="Platstore"
+              />
+            </Box>
+
+            <Box>
+              <Image
+                h={10}
+                w="full"
+                src="/images/appstore.png"
+                alt="AppStore"
+              />
+            </Box>
+          </HStack>
+        </Stack>
+        <Box>
+          <Image src="/images/sharp-app.png" />
+        </Box>
+      </HStack>
     </Stack>
   );
 };
