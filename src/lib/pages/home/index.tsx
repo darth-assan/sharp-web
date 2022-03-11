@@ -185,8 +185,8 @@ const Home = () => {
       <HStack
         spacing={{ md: "8rem" }}
         bg="brand.primary"
-        p={{ base: 6, md: 48 }}
-        py={{ base: 20, md: 48 }}
+        p={{ base: 6, md: 24 }}
+        py={{ base: 20, md: 24 }}
         flexDirection={{ base: "column", md: "row" }}
       >
         <Stack w={{ md: "50%" }}>
