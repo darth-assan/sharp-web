@@ -1,13 +1,8 @@
-import {
-  Box,
-  HStack,
-  Heading,
-  Image,
-  Stack,
-  Text,
-  ResponsiveValue,
-} from "@chakra-ui/react";
+import type { ResponsiveValue } from "@chakra-ui/react";
+import { Box, HStack, Heading, Image, Stack, Text } from "@chakra-ui/react";
+// eslint-disable-next-line import/no-extraneous-dependencies
 import { Property } from "csstype";
+
 import FlexDirection = Property.FlexDirection;
 
 const AboutItem = ({

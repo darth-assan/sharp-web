@@ -3,7 +3,7 @@ import { Box, Heading, Image, Stack } from "@chakra-ui/react";
 import LeftImage from "../lib/components/LeftImage";
 import RightImage from "../lib/components/RightImage";
 
-const Request = () => {
+const BecomeSepro = () => {
   return (
     <Box spacing={{ base: "2rem", md: "10rem" }}>
       <Box h={{ base: 90, md: 120 }}>
@@ -29,20 +29,26 @@ const Request = () => {
             />
             <RightImage
               no={2}
-              title="Pick a Job Category"
-              subtitle="From the list of options, select the job category your problem fits into"
+              title="Verify your Identity"
+              subtitle="Use your National Identification Card (Ghana Card) as a form of identification"
             />
             <LeftImage
               no={3}
               top={-20}
-              title="Make a Request"
-              subtitle="Fill in your location, job description and wait while we connect you to an artisan."
+              title="Set Availability"
+              subtitle="Use the toggle bar to indicate your availabity for work."
             />
             <RightImage
               no={4}
-              title="Get the Job done!"
-              subtitle="Voila! Sit back and relax and watch your problem being fixed!"
+              title="Accept Requests"
+              subtitle="Youre now ready to receive and accept requests!"
+            />
+            <LeftImage
+              no={5}
+              top={-20}
               arrow={false}
+              title="Ready to Earn!"
+              subtitle="That’s it! After completing these steps, you are now ready to earn some cash!"
             />
           </Box>
 
@@ -55,4 +61,4 @@ const Request = () => {
   );
 };
 
-export default Request;
+export default BecomeSepro;
