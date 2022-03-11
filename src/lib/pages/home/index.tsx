@@ -27,9 +27,8 @@ const Home = () => {
   return (
     <Stack spacing="0rem">
       <HStack
-        // d={{ base: "none", md: "flex" }}
         pl={{ md: 20 }}
-        px={{ base: 4, md: 0 }}
+        px={{ base: 4, md: 10 }}
         spacing={{ md: "5rem" }}
         bg="black"
         color="white"
