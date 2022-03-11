@@ -17,10 +17,11 @@ const Support = () => {
         textAlign="center"
         bg="brand.primary"
         direction="column"
-        py={{ md: 48 }}
+        py={{ base: 24, md: 48 }}
+        px={{ base: 4, md: 0 }}
       >
         <Stack spacing="1rem" w={{ md: 120 }}>
-          <Heading as="h3" fontSize={{ md: "5xl" }}>
+          <Heading as="h3" fontSize={{ base: "3xl", md: "5xl" }}>
             Here to help &amp; listen
           </Heading>
           <Text>
@@ -77,7 +78,7 @@ const Support = () => {
           </Form>
         </Flex>
 
-        <Box bg="white" py={{ md: 20 }}>
+        <Box bg="white" py={{ base: 14, md: 20 }}>
           <Stack
             w={{ md: 122 }}
             maxW={{ md: 122 }}
