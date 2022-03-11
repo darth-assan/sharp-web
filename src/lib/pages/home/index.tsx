@@ -139,33 +139,19 @@ const Home = () => {
       >
         <AboutItem
           title="What is Sharp?"
-          text=" Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Ullamcorper sed consectetur arcu at velit. Et vel integer amet
-              curabitur egestas diam blandit vel. Lorem sapien, neque donec
-              sollicitudin. Justo, venenatis sit tellus et. Viverra etiam
-              maecenas ac turpis aliquam, eget velit maecenas. Donec quis mi
-              aliquam cursus mauris. Mauris risus sed auctor fringilla rhoncus
-              tortor sed. Egestas dignissim donec ornare id pellentesque
-              commodo. Dui morbi ullamcorper in iaculis erat tincidunt."
+          text="Sharp is an online platform that facilitates fast and convenient on-demand service transactions by connecting customers with local service professionals (SerPros) in need of mainly home and office services. It is designed to address the challenges faced by Customers in obtaining secure and reliable professionals. Sharp! offers the benefits of finding skilled, experienced and trusted individuals at optimum costs. Customers can choose from a variety of professions and services like construction-related services & repairs, gardening, cleaning, automobile and beauty-related services etc."
           img="hero.jpg"
         />
         <AboutItem
-          title="What is Sharp?"
-          text=" Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Ullamcorper sed consectetur arcu at velit. Et vel integer amet
-              curabitur egestas diam blandit vel. Lorem sapien, neque donec
-              sollicitudin. Justo, venenatis sit tellus et. Viverra etiam
-              maecenas ac turpis aliquam, eget velit maecenas. Donec quis mi
-              aliquam cursus mauris. Mauris risus sed auctor fringilla rhoncus
-              tortor sed. Egestas dignissim donec ornare id pellentesque
-              commodo. Dui morbi ullamcorper in iaculis erat tincidunt."
+          title="More About SHARP"
+          text="Sharp! is a technological initiative of DonWudi Investment. Ing. Philip Lartey is the CEO/Founder of DonWudi Investment and has over 34 years of active working experience in the public sector. He has performed numerous senior roles in road engineering and finance areas. In the private sector, he has undertaken many consultancy assignments in the construction landscape. He is an astute entrepreneur with an eye for developing opportunities."
           img="hero.jpg"
           flexDirection="row-reverse"
         />
       </Stack>
 
       <Box bg="white" p={{ md: 36 }}>
-        <Stack w={{ md: 125 }} mx="auto" spacing="4rem">
+        <Stack w={{ md: 122 }} maxW={{ md: 122 }} mx="auto" spacing="4rem">
           <Stack textAlign="center">
             <Heading>Frequently Asked Questions</Heading>
             <Text>
@@ -189,11 +175,11 @@ const Home = () => {
       >
         <Stack w={{ md: "50%" }}>
           <Heading as="h3" fontSize={{ md: "5xl" }}>
-            Download the mobile app today!
+            Download SHARP Today!
           </Heading>
           <Text>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Iaculis
-            porttitor aliquam nulla feugiat duis vitae ipsum malesuada.
+            A secure, fast & reliable way to connect to trust-worthy, quality &
+            customer obsessed service professionals.
           </Text>
           <HStack align="center" spacing="2rem">
             <Box>
