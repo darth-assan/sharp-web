@@ -148,8 +148,8 @@ const Home = () => {
       <Stack
         spacing={{ base: "5rem", md: "8rem" }}
         bg="brand.primary"
-        p={{ base: 6, md: 48 }}
-        py={{ base: 20, md: 48 }}
+        p={{ base: 6, md: 24 }}
+        py={{ base: 20, md: 24 }}
       >
         <AboutItem
           title="What is Sharp?"
@@ -165,7 +165,7 @@ const Home = () => {
         />
       </Stack>
 
-      <Box bg="white" p={{ md: 36 }} py={{ base: 20, md: 36 }}>
+      <Box bg="white" p={{ md: 24 }} py={{ base: 20, md: 36 }}>
         <Stack w={{ md: 122 }} maxW={{ md: 122 }} mx="auto" spacing="4rem">
           <Stack textAlign="center">
             <Heading>Frequently Asked Questions</Heading>
