@@ -31,7 +31,7 @@ export const theme = extendTheme({
     }),
   },
   breakpoints,
-  fonts,
+  ...fonts,
   fontSizes: {
     xx: ".55rem",
     tiny: ".68rem",
