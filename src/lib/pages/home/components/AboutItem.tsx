@@ -19,7 +19,7 @@ const AboutItem = ({
   return (
     <HStack
       templateColumns={{ md: "repeat(2, 1fr)" }}
-      gap={20}
+      gap={{ base: 8, md: 20 }}
       flexDirection={flexDirection}
     >
       <Stack spacing="1rem">

@@ -27,40 +27,47 @@ const Home = () => {
   return (
     <Stack spacing="0rem">
       <HStack
-        d={{ base: "none", md: "flex" }}
+        // d={{ base: "none", md: "flex" }}
         pl={{ md: 20 }}
+        px={{ base: 4, md: 0 }}
         spacing={{ md: "5rem" }}
         bg="black"
         color="white"
-        h={120}
+        h={{ base: 123, md: 120 }}
         pos="relative"
       >
-        <Stack w={{ md: "50%" }} spacing="1rem">
-          <MotionHeading
-            as="h2"
-            fontSize={{ md: "6xl" }}
-            initial={{ opacity: 0, x: -300 }}
-            animate={{
-              opacity: 1,
-              x: 0,
-              transition: { delay: 0.3, ...transition },
-            }}
+        <Stack w={{ md: "50%" }} spacing={{ base: "4rem", md: "1rem" }}>
+          <Stack spacing="1rem" textAlign={{ base: "center", md: "left" }}>
+            <MotionHeading
+              as="h2"
+              fontSize={{ base: "5xl", md: "6xl" }}
+              initial={{ opacity: 0, x: -300 }}
+              animate={{
+                opacity: 1,
+                x: 0,
+                transition: { delay: 0.3, ...transition },
+              }}
+            >
+              Secure quality efficient and professional services
+            </MotionHeading>
+            <MotionText
+              fontSize={{ md: "xl" }}
+              initial={{ opacity: 0, x: -300 }}
+              animate={{
+                opacity: 1,
+                x: 0,
+                transition: { delay: 0.6, ...transition },
+              }}
+            >
+              Obtain professional services with this flexible app{" "}
+              <Box as="br" d={{ base: "none", md: "block" }} />
+              that links you to responsive Service Providers
+            </MotionText>
+          </Stack>
+          <HStack
+            spacing={{ md: "5rem" }}
+            flexDirection={{ base: "column", md: "row" }}
           >
-            Secure quality efficient and professional services
-          </MotionHeading>
-          <MotionText
-            fontSize="xl"
-            initial={{ opacity: 0, x: -300 }}
-            animate={{
-              opacity: 1,
-              x: 0,
-              transition: { delay: 0.6, ...transition },
-            }}
-          >
-            Obtain professional services with this flexible app <br />
-            that links you to responsive Service Providers
-          </MotionText>
-          <HStack spacing="5rem">
             <NextLink href="/become-sepro" passHref>
               <MotionLink
                 _hover={{ textDecor: "none" }}
@@ -93,6 +100,7 @@ const Home = () => {
                   transition: { delay: 1.0, ...transition },
                 }}
                 d="block"
+                pt={{ base: 4, md: 0 }}
               >
                 <Button
                   title="Request Serpro"
@@ -104,7 +112,13 @@ const Home = () => {
             </NextLink>
           </HStack>
         </Stack>
-        <Box w={{ md: "50%" }} pos="absolute" bottom={0} right={0}>
+        <Box
+          w={{ md: "50%" }}
+          pos="absolute"
+          bottom={0}
+          right={0}
+          d={{ base: "none", md: "block" }}
+        >
           <Image src="/images/home-img.png" />
         </Box>
       </HStack>
@@ -132,7 +146,7 @@ const Home = () => {
       </Box>
 
       <Stack
-        spacing="8rem"
+        spacing={{ base: "5rem", md: "8rem" }}
         bg="brand.primary"
         p={{ base: 6, md: 48 }}
         py={{ base: 20, md: 48 }}
@@ -141,16 +155,17 @@ const Home = () => {
           title="What is Sharp?"
           text="Sharp is an online platform that facilitates fast and convenient on-demand service transactions by connecting customers with local service professionals (SerPros) in need of mainly home and office services. It is designed to address the challenges faced by Customers in obtaining secure and reliable professionals. Sharp! offers the benefits of finding skilled, experienced and trusted individuals at optimum costs. Customers can choose from a variety of professions and services like construction-related services & repairs, gardening, cleaning, automobile and beauty-related services etc."
           img="hero.jpg"
+          flexDirection={{ base: "column", md: "row" }}
         />
         <AboutItem
           title="More About SHARP"
           text="Sharp! is a technological initiative of DonWudi Investment. Ing. Philip Lartey is the CEO/Founder of DonWudi Investment and has over 34 years of active working experience in the public sector. He has performed numerous senior roles in road engineering and finance areas. In the private sector, he has undertaken many consultancy assignments in the construction landscape. He is an astute entrepreneur with an eye for developing opportunities."
           img="hero.jpg"
-          flexDirection="row-reverse"
+          flexDirection={{ base: "column", md: "row-reverse" }}
         />
       </Stack>
 
-      <Box bg="white" p={{ md: 36 }}>
+      <Box bg="white" p={{ md: 36 }} py={{ base: 20, md: 36 }}>
         <Stack w={{ md: 122 }} maxW={{ md: 122 }} mx="auto" spacing="4rem">
           <Stack textAlign="center">
             <Heading>Frequently Asked Questions</Heading>
@@ -168,13 +183,14 @@ const Home = () => {
       </Box>
 
       <HStack
-        spacing="8rem"
+        spacing={{ md: "8rem" }}
         bg="brand.primary"
         p={{ base: 6, md: 48 }}
         py={{ base: 20, md: 48 }}
+        flexDirection={{ base: "column", md: "row" }}
       >
         <Stack w={{ md: "50%" }}>
-          <Heading as="h3" fontSize={{ md: "5xl" }}>
+          <Heading as="h3" fontSize={{ base: "3xl", md: "5xl" }}>
             Download SHARP Today!
           </Heading>
           <Text>
@@ -201,7 +217,7 @@ const Home = () => {
             </Box>
           </HStack>
         </Stack>
-        <Box>
+        <Box pt={{ base: 10, md: 0 }}>
           <Image src="/images/sharp-app.png" />
         </Box>
       </HStack>
