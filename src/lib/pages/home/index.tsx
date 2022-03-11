@@ -61,7 +61,7 @@ const Home = () => {
             that links you to responsive Service Providers
           </MotionText>
           <HStack spacing="5rem">
-            <NextLink href="/request" passHref>
+            <NextLink href="/become-sepro" passHref>
               <MotionLink
                 _hover={{ textDecor: "none" }}
                 width={{ md: 40 }}
@@ -86,11 +86,11 @@ const Home = () => {
               <MotionLink
                 _hover={{ textDecor: "none" }}
                 width={{ md: 40 }}
-                initial={{ opacity: 0, x: -300 }}
+                initial={{ opacity: 0, y: 100 }}
                 animate={{
                   opacity: 1,
-                  x: 0,
-                  transition: { delay: 0.8, ...transition },
+                  y: 0,
+                  transition: { delay: 1.0, ...transition },
                 }}
                 d="block"
               >
