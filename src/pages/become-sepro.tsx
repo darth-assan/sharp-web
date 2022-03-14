@@ -1,9 +1,20 @@
-import { Box, Heading, Image, Stack } from "@chakra-ui/react";
+import { Box, Heading, HStack, Image, Stack } from "@chakra-ui/react";
+import { VscWorkspaceTrusted } from "react-icons/vsc";
 
 import LeftImage from "../lib/components/LeftImage";
 import RightImage from "../lib/components/RightImage";
+import { HandyTool, Speed } from "../lib/styles/icons";
+import IconBox from "../lib/components/IconBox";
 
 const BecomeSepro = () => {
+  const features = [
+    { id: 1, icon: Speed, text: "Smart" },
+    { id: 2, icon: HandyTool, text: "Helping Hand" },
+    { id: 2, img: "accessible", text: "Available" },
+    { id: 2, icon: VscWorkspaceTrusted, text: "Reliable" },
+    { id: 2, img: "professional", text: "Profitable" },
+  ];
+
   return (
     <Box spacing={{ base: "2rem", md: "10rem" }}>
       <Box h={{ base: 90, md: 120 }}>
@@ -52,8 +63,19 @@ const BecomeSepro = () => {
             />
           </Box>
 
-          <Stack>
+          <Stack textAlign="center" spacing="4rem" w={{ md: "85%" }} mx="auto">
             <Heading>Why SHARP?</Heading>
+
+            <HStack align="center" justify="space-between">
+              {features.map((item) => (
+                <IconBox
+                  key={item.id}
+                  icon={item.icon}
+                  text={item.text}
+                  img={item.img}
+                />
+              ))}
+            </HStack>
           </Stack>
         </Stack>
       </Box>

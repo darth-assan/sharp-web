@@ -1,9 +1,20 @@
-import { Box, Heading, Image, Stack } from "@chakra-ui/react";
+import { Box, Heading, HStack, Image, Stack } from "@chakra-ui/react";
+import { HiOutlineThumbUp } from "react-icons/hi";
 
+import IconBox from "../lib/components/IconBox";
 import LeftImage from "../lib/components/LeftImage";
 import RightImage from "../lib/components/RightImage";
+import { HandyTool, Speed } from "../lib/styles/icons";
 
 const Request = () => {
+  const features = [
+    { id: 1, icon: Speed, text: "Satisfied" },
+    { id: 2, icon: HandyTool, text: "Happy" },
+    { id: 2, img: "accessible", text: "Affordable" },
+    { id: 2, icon: HiOutlineThumbUp, text: "Relief" },
+    { id: 2, img: "professional", text: "Peace of Mind" },
+  ];
+
   return (
     <Box spacing={{ base: "2rem", md: "10rem" }}>
       <Box h={{ base: 90, md: 120 }}>
@@ -46,8 +57,19 @@ const Request = () => {
             />
           </Box>
 
-          <Stack>
+          <Stack textAlign="center" spacing="4rem" w={{ md: "85%" }} mx="auto">
             <Heading>Why SHARP?</Heading>
+
+            <HStack align="center" justify="space-between">
+              {features.map((item) => (
+                <IconBox
+                  key={item.id}
+                  icon={item.icon}
+                  text={item.text}
+                  img={item.img}
+                />
+              ))}
+            </HStack>
           </Stack>
         </Stack>
       </Box>
