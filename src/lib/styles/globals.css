@@ -1,4 +1,9 @@
 /* Global Styling here */
+
+html, body {
+  scroll-behavior: smooth;
+}
+
 .form-control {
   background-color: white !important;
   color: #e3a828;

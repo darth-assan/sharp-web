@@ -23,10 +23,7 @@ export const theme = extendTheme({
         // eslint-disable-next-line sonarjs/no-duplicate-string
         fontFamily: '"Poppins", sans-serif',
         lineHeight: "tall",
-        maxWidth: "1920px",
-        width: "90%",
-        mx: "auto",
-        bg: "gray.50",
+        bg: "white",
       },
     }),
   },
