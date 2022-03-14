@@ -5,9 +5,17 @@ import AboutSection from "../../sections/AboutSection";
 import CtaSection from "../../sections/CTASection";
 import FaqSection from "../../sections/FAQSection";
 import HomeHeader from "../../sections/HomeHeader";
-import { Speed } from "../../styles/icons";
+import { Accessible, HandyTool, Professional, Speed } from "../../styles/icons";
 
 const Home = () => {
+  const features = [
+    { id: 1, icon: Speed, text: "Speed of Use" },
+    { id: 2, icon: HandyTool, text: "Handy Tool" },
+    { id: 2, icon: Accessible, text: "Accessible Anytime" },
+    { id: 2, icon: HandyTool, text: "Responsive" },
+    { id: 2, icon: Professional, text: "Professional Service" },
+  ];
+
   return (
     <Stack spacing="0rem">
       <HomeHeader />
@@ -17,11 +25,9 @@ const Home = () => {
           <Heading>Who We Are</Heading>
 
           <HStack align="center" justify="space-between">
-            <IconBox icon={Speed} text="Speed of Use" />
-            <IconBox icon={Speed} text="Speed of Use" />
-            <IconBox icon={Speed} text="Speed of Use" />
-            <IconBox icon={Speed} text="Speed of Use" />
-            <IconBox icon={Speed} text="Speed of Use" />
+            {features.map((item) => (
+              <IconBox key={item.id} icon={item.icon} text={item.text} />
+            ))}
           </HStack>
         </Stack>
       </Box>
