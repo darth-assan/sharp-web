@@ -1,19 +1,20 @@
 import { Box, Heading, HStack, Stack } from "@chakra-ui/react";
+import { FiRefreshCcw } from "react-icons/fi";
 
 import IconBox from "../../components/IconBox";
 import AboutSection from "../../sections/AboutSection";
 import CtaSection from "../../sections/CTASection";
 import FaqSection from "../../sections/FAQSection";
 import HomeHeader from "../../sections/HomeHeader";
-import { Accessible, HandyTool, Professional, Speed } from "../../styles/icons";
+import { HandyTool, Speed } from "../../styles/icons";
 
 const Home = () => {
   const features = [
     { id: 1, icon: Speed, text: "Speed of Use" },
     { id: 2, icon: HandyTool, text: "Handy Tool" },
-    { id: 2, icon: Accessible, text: "Accessible Anytime" },
-    { id: 2, icon: HandyTool, text: "Responsive" },
-    { id: 2, icon: Professional, text: "Professional Service" },
+    { id: 2, img: "accessible", text: "Accessible Anytime" },
+    { id: 2, icon: FiRefreshCcw, text: "Responsive" },
+    { id: 2, img: "professional", text: "Professional Service" },
   ];
 
   return (
@@ -26,7 +27,12 @@ const Home = () => {
 
           <HStack align="center" justify="space-between">
             {features.map((item) => (
-              <IconBox key={item.id} icon={item.icon} text={item.text} />
+              <IconBox
+                key={item.id}
+                icon={item.icon}
+                text={item.text}
+                img={item.img}
+              />
             ))}
           </HStack>
         </Stack>
