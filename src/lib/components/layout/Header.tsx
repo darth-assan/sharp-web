@@ -33,7 +33,7 @@ const Header = ({ onOpen }: { onOpen: () => void }) => {
           <Link _hover={{ textDecor: "none" }}>Home</Link>
         </NextLink>
 
-        <Link href="#about" _hover={{ textDecor: "none" }}>
+        <Link href="/#about" _hover={{ textDecor: "none" }}>
           About Us
         </Link>
 
