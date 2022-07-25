@@ -46,6 +46,9 @@ const Header = ({ onOpen }: { onOpen: () => void }) => {
         <NextLink href="/support" passHref>
           <Link _hover={{ textDecor: "none" }}>Help</Link>
         </NextLink>
+        <NextLink href="#faq" passHref>
+          <Link _hover={{ textDecor: "none" }}>FAQ</Link>
+        </NextLink>
         <NextLink href="/contact" passHref>
           <Link _hover={{ textDecor: "none" }}>Contact Us</Link>
         </NextLink>
