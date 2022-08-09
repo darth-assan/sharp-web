@@ -6,8 +6,7 @@ head
     meta(content='' name='description')
     meta(content='' name='keywords')
     // Favicons
-    //- link(href='assets/img/favicon.png' rel='icon')
-    //- link(href='assets/img/apple-touch-icon.png' rel='apple-touch-icon')
+    link(href='assets/img/icon.png' rel='icon')
     // Google Fonts
     link(rel='preconnect' href='https://fonts.googleapis.com')
     link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
@@ -29,6 +28,16 @@ header#header.header.fixed-top
       img(src='assets/img/sharp-logo.png' alt='')
     nav#navbar.navbar
       ul
+        li
+          a.nav-link.scrollto(href='#hero') Home
+        li
+          a.nav-link.scrollto(href='#about') About
+        li
+          a.nav-link.scrollto(href='#hiw') How it works
+        li
+          a.nav-link.scrollto(href='#faq') FAQs
+        li
+          a.nav-link.scrollto(href='#contact') Contact us
         li
           a.getstarted.scrollto(href='#cta2') Get Started
       i.bi.bi-list.mobile-nav-toggle
