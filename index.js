@@ -8,6 +8,16 @@ app.get('/', (req, res) => {
     })
   })
 
+app.get('/privacy', (req, res) => {
+  res.render('privacy',{
+  })
+})
+
+app.get('/terms', (req, res) => {
+  res.render('t&c',{
+  })
+})
+
 // Middleware
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));

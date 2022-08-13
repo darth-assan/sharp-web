@@ -14,16 +14,15 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  color: #444444;
 }
 
 a {
-  color: #4154f1;
+  color: #fff;
   text-decoration: none;
 }
 
 a:hover {
-  color: #717ff5;
+  color: rgb(198, 198, 198);
   text-decoration: none;
 }
 
@@ -174,12 +173,12 @@ section {
   transition: all 0.5s;
   z-index: 997;
   padding: 20px 0;
+  background-color: #000;
 }
 
 .header.header-scrolled {
-  background: #fff;
+  background: #000;
   padding: 15px 0;
-  box-shadow: 0px 2px 20px rgba(1, 41, 112, 0.1);
 }
 
 .header .logo {
@@ -231,7 +230,7 @@ section {
   font-family: "Nunito", sans-serif;
   font-size: 16px;
   font-weight: 700;
-  color: #000;
+  color: #fff;
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -252,11 +251,11 @@ section {
 
 .navbar .getstarted,
 .navbar .getstarted:focus {
-  background: #000;
+  background: #fff;
   padding: 8px 20px;
   margin-left: 30px;
   border-radius: 4px;
-  color: #fff;
+  color: #000;
 }
 
 .navbar .getstarted:hover,
@@ -299,7 +298,7 @@ section {
 .navbar .dropdown ul a:hover,
 .navbar .dropdown ul .active:hover,
 .navbar .dropdown ul li:hover>a {
-  color: #4154f1;
+  color: #bcbcbc;
 }
 
 .navbar .dropdown:hover>ul {
@@ -445,10 +444,15 @@ section {
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  height: 80vh;
-  background-color: #F2E3D5;
-  /* background: url(../img/hero-bg.png) top center no-repeat; */
+  height: 72vh;
+  background-color: #000;
+  background: url(../img/hero.png) top center no-repeat;
   background-size: cover;
+}
+#hero-img-cust{
+  background: url(../img/hero-img.png) top center no-repeat;
+  background-size:cover;
+  overflow:auto
 }
 
 .hero h1 {
@@ -471,7 +475,6 @@ section {
   border-radius: 4px;
   transition: 0.5s;
   color: #fff;
-  background: #4154f1;
   box-shadow: 0px 5px 30px rgba(65, 84, 241, 0.4);
 }
 
@@ -548,8 +551,8 @@ section {
 # About
 --------------------------------------------------------------*/
 .mycta {
-  background-color: #f6f9ff;
-  background-image: url("../img/cta_bg.png");
+  background-color: #e5b851;
+  /* background-image: url("../img/cta_bg.png"); */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;
@@ -557,7 +560,7 @@ section {
 }
 
 .mycta2 {
-  background-color: #f2e3d5;
+  background-color: #e5b851;
   padding: 70px;
 }
 .cta2header{
@@ -2249,7 +2252,7 @@ section {
 # Footer
 --------------------------------------------------------------*/
 .footer {
-  background: #f6f9ff;
+  background: #000;
   padding: 0 0 30px 0;
   font-size: 14px;
 }
@@ -2398,14 +2401,14 @@ section {
 }
 
 .footer .footer-top .footer-links ul a {
-  color: #013289;
+  color: #000;
   transition: 0.3s;
   display: inline-block;
   line-height: 1;
 }
 
 .footer .footer-top .footer-links ul a:hover {
-  color: #4154f1;
+  color: #000;
 }
 
 .footer .footer-top .footer-contact p {
@@ -2413,7 +2416,14 @@ section {
 }
 
 .footer .copyright {
-  text-align: center;
+  text-align:  left;
+  padding-top: 30px;
+  color: #fff;
+  float:left
+}
+
+.footer .termsnpolicy {
+  text-align:  right;
   padding-top: 30px;
   color: #000;
 }
@@ -2423,4 +2433,18 @@ section {
   text-align: center;
   font-size: 13px;
   color: #012970;
+}
+
+.content-abt {
+  background-color: #e8e8e875;
+  padding: 40px;
+}
+#privacy{
+  font-size: 14px;
+  font-weight: 700;
+  color: #000;
+  text-transform: uppercase;
+}
+.privacy-text{
+  text-align: justify;
 }
