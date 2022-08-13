@@ -687,14 +687,18 @@ section {
 --------------------------------------------------------------*/
 .features .feature-box {
   padding: 24px 20px;
-  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+  background-color: #e5b851;
   transition: 0.3s;
   height: 100%;
 }
 
+.feature-bg{
+  background-color: #121212;
+}
+
 .features .feature-box h3 {
   font-size: 18px;
-  color: #012970;
+  color: #000;
   font-weight: 700;
   margin: 0;
 }
@@ -710,7 +714,7 @@ section {
 }
 
 .features .feature-box:hover i {
-  background: #4154f1;
+  background: #000;
   color: #fff;
 }
 
