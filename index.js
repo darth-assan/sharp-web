@@ -14,7 +14,12 @@ app.get('/privacy', (req, res) => {
 })
 
 app.get('/terms', (req, res) => {
-  res.render('t&c',{
+  res.render('terms',{
+  })
+})
+
+app.get('/about', (req, res) => {
+  res.render('about',{
   })
 })
 

@@ -230,7 +230,7 @@ section {
   font-family: "Nunito", sans-serif;
   font-size: 16px;
   font-weight: 700;
-  color: #fff;
+  color: #e5b851;
   white-space: nowrap;
   transition: 0.3s;
 }
@@ -246,12 +246,12 @@ section {
 .navbar .active,
 .navbar .active:focus,
 .navbar li:hover>a {
-  color: rgb(102, 102, 102);
+  color: #fff;
 }
 
 .navbar .getstarted,
 .navbar .getstarted:focus {
-  background: #fff;
+  background: #e5b851;
   padding: 8px 20px;
   margin-left: 30px;
   border-radius: 4px;
@@ -260,8 +260,8 @@ section {
 
 .navbar .getstarted:hover,
 .navbar .getstarted:focus:hover {
-  color: #fff;
-  background: #000;
+  color: #000;
+  background: #fff;
 }
 
 .navbar .dropdown ul {
@@ -752,15 +752,15 @@ section {
 }
 
 .features .feture-tabs .nav-link.active {
-  color: #4154f1;
-  border-bottom: 3px solid #4154f1;
+  color: #000;
+  border-bottom: 3px solid #e5b851;
 }
 
 .features .feture-tabs .tab-content h4 {
   font-size: 18px;
   margin: 0;
   font-weight: 700;
-  color: #012970;
+  color: #000;
 }
 
 .features .feture-tabs .tab-content i {

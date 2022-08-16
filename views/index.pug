@@ -22,9 +22,8 @@ main#main
     .container
       .row.gx-0.pt-4
         .col-lg-5.offset-lg-2 
-          h2 Earn extra cash on Serpro
-          p(style = "color:#000") Sign up today, be a professional service provider
-        
+          h2 Earn extra cash on SHARP
+          p(style = "color:#000") Sign up today, be a Serpro
         .col-lg-5
           .text-center.text-lg-start
             a.btn-read-more.d-inline-flex.align-items-center.justify-content-center.align-self-center(href='#')
@@ -34,23 +33,33 @@ main#main
   // End CTA
 
   // ======= About Section =======
-  section#about.about
+  section#about.features(style="margin-top:-160px")
     .container(data-aos='fade-up')
-      .row.gx-0
-        .col-lg-6.d-flex.flex-column.justify-content-center
-          .content.content-abt 
-            h3(style="color:#000") Who We Are
-            h2
-              | Sharp! is a hassle-free app that enhances linkages and transactions between Customers and Service Professionals (Serpros) to undertake regular and emergency home, site and office activities.
-            p
-              | It is designed to address the challenges faced by Customers in obtaining secure and reliable professionals. Sharp! offers the benefits of finding skilled, experienced and trusted individuals at optimum costs.
-            .text-center.text-lg-start
-              a.btn-read-more.d-inline-flex.align-items-center.justify-content-center.align-self-center(href='#contact')
-                span Contact us
-                i.bi.bi-arrow-right
-        .col-lg-6.d-flex.align-items-center
+      header.section-header
+      // Feature Tabs
+      .row.feture-tabs(data-aos='fade-up')
+        .col-lg-7
+          // Tabs
+          ul.nav.nav-pills.mb-3
+            li
+              a.nav-link.active(data-bs-toggle='pill' href='#tab1') Who we are
+          // Tab Content
+          .tab-content
+            #tab1.tab-pane.fade.show.active
+              .d-flex.align-items-center.mb-2
+                i.bi.bi-check2(style="color:#000")
+                h4 What is Sharp!?
+              p
+                | Sharp! is an online platform that facilitates fast and convenient on-demand service transactions by connecting customers with local service professionals (Serpros) in need of mainly home and office services. It is designed to address the challenges faced by Customers in obtaining secure and reliable professionals. Sharp! offers the benefits of finding skilled, experienced and trusted individuals at optimum costs. Customers can choose from a variety of professions and services like construction-related services & repairs, gardening, cleaning, automobile and beauty-related services etc.
+              .d-flex.align-items-center.mb-2
+                i.bi.bi-check2(style="color:#000")
+                h4 Who is behind Sharp!?
+              p
+                | Sharp! is a technological initiative of DonWudi Investment. Ing. Philip Lartey is the CEO/Founder of DonWudi Investment and has over 34 years of active working experience In the public sector. He has performed numerous senior roles in road engineering and finance areas. In the private sector, he has undertaken many consultancy assignments in the construction landscape. He is an astute entrepreneur with an eye for developing opportunities.
+            // End Tab 1 Content
+        .col-lg-5.d-flex.align-items-center
           img.img-fluid(src='assets/img/about.png' alt='')
-
+  
   // ======= Features ======
   section#features.features.feature-bg
     .container(data-aos='fade-up')
@@ -64,28 +73,27 @@ main#main
             .col-md-6(data-aos='zoom-out' data-aos-delay='200')
               .feature-box.d-flex.align-items-center
                 i.bi.bi-check
-                h3 Eos aspernatur rem
+                h3 Have Your Work Done
             .col-md-6(data-aos='zoom-out' data-aos-delay='300')
               .feature-box.d-flex.align-items-center
                 i.bi.bi-check
-                h3 Facilis neque ipsa
+                h3 Monitor Job Status & Provide Feedback
             .col-md-6(data-aos='zoom-out' data-aos-delay='400')
               .feature-box.d-flex.align-items-center
                 i.bi.bi-check
-                h3 Volup amet voluptas
+                h3 Request A Service Professional
             .col-md-6(data-aos='zoom-out' data-aos-delay='500')
               .feature-box.d-flex.align-items-center
                 i.bi.bi-check
-                h3 Rerum omnis sint
+                h3 Work With Verified Service Professionals
             .col-md-6(data-aos='zoom-out' data-aos-delay='600')
               .feature-box.d-flex.align-items-center
                 i.bi.bi-check
-                h3 Alias possimus
+                h3 Wide Range Of Service Professionals
             .col-md-6(data-aos='zoom-out' data-aos-delay='700')
               .feature-box.d-flex.align-items-center
                 i.bi.bi-check
-                h3 Repellendus mollitia
-
+                h3 Quick Signup With Phone Number & OTP
 
   // ===== FAQ =========
   section#faq.faq
@@ -182,7 +190,7 @@ main#main
     .container(data-aos='fade-up')
       header.section-header 
         h1.cta2header Get started
-        h5 Download the serpro app
+        h5 Download the SHARP app
         br
         .mx-auto
           img(src='assets/img/appstore.svg')
