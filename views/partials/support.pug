@@ -1,0 +1,53 @@
+section#contact.contact
+  .container(data-aos='fade-up')
+    header.section-header
+        h2(style="color:#000") Contact Us
+    .row.gy-4
+      .col-lg-6
+        .row.gy-4
+          .col-md-6
+            .info-box
+              i.bi.bi-geo-alt
+              h3 Address
+              p
+                | A108 Adam Street,
+                br
+                | New York, NY 535022
+          .col-md-6
+            .info-box
+              i.bi.bi-telephone
+              h3 Call Us
+              p
+                | +1 5589 55488 55
+                br
+                | +1 6678 254445 41
+          .col-md-6
+            .info-box
+              i.bi.bi-envelope
+              h3 Email Us
+              p
+                | info@example.com
+                br
+                | contact@example.com
+          .col-md-6
+            .info-box
+              i.bi.bi-clock
+              h3 Open Hours
+              p
+                | Monday - Friday
+                br
+                | 9:00AM - 05:00PM
+      .col-lg-6
+        form.php-email-form(action='#' method='post')
+          .row.gy-4
+            .col-md-6
+              input.form-control(type='text' name='name' placeholder='Your Name' required='')
+            .col-md-6
+              input.form-control(type='email' name='email' placeholder='Your Email' required='')
+            .col-md-12
+              input.form-control(type='text' name='subject' placeholder='Subject' required='')
+            .col-md-12
+              textarea.form-control(name='message' rows='6' placeholder='Message' required='')
+            .col-md-12.text-center
+              button(type='submit') Send Message
+// End Contact Section
