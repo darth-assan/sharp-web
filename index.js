@@ -28,6 +28,10 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.set("view engine", "pug");
 
+app.use((req, res,next)=>{
+  res.render('404');
+});
+
 // Server configuration
 app.listen(PORT, () => console.log(`Listening on ${ PORT }`));
 

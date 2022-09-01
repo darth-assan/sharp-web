@@ -2452,3 +2452,22 @@ section {
 .privacy-text{
   text-align: justify;
 }
+.four-0-four{
+  height: 75vh;
+}
+.four-0-four h1 {
+  margin: 0;
+  font-size: 35px;
+  font-weight: 700;
+  color: #000;
+}
+.four-0-four-button{
+    background: #e5b851;
+    padding: 8px 20px;
+    border-radius: 4px;
+    color: #000;
+}
+.four-0-four-button:hover{
+  color: #fff;
+  background: #000;
+}
